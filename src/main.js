@@ -1,14 +1,18 @@
 'use strict';
 
-import Vue from 'vue'
-import App from './App.vue'
+import Vue from 'vue';
+import App from './App.vue';
 
-import router from './router'
-import store from './store'
+import router from './router';
+import store  from './store';
 
-import './registerServiceWorker'
+import * as api from './api';
 
-Vue.config.productionTip = false
+import './registerServiceWorker';
+
+Vue.prototype.$api = api;
+
+Vue.config.productionTip = false;
 
 new Vue({
     router,
